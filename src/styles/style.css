@@ -1,0 +1,614 @@
+.sidebar {
+
+    box-shadow: 0rem 1.25rem 1.6875rem 0rem rgba(0, 0, 0, 0.05);
+    width: 250px;
+    height: 645px;
+    background: linear-gradient(195deg, #42424a, #191919);
+    margin: 20px;
+    border-radius: 10px;
+}
+
+td {
+    text-wrap: nowrap;
+}
+
+th {
+    text-wrap: nowrap;
+}
+
+
+
+.dashboard-icons {
+    width: 25px;
+    height: 25px;
+}
+
+.tableActonImgs {
+    width: 25px;
+    height: 25px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.tableActonImg {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.dItems {
+    display: flex;
+    gap: 15px;
+    list-style-type: none;
+    color: white;
+    width: 200px;
+    padding: 15px;
+    border-radius: 16px;
+    cursor: pointer;
+    margin-bottom: 0px;
+
+}
+
+
+.manager {
+    height: 50px;
+    width: 50px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding: 15px;
+    position: relative;
+
+}
+
+.logo::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(195deg, #42424a, #ffffff 50%, #191919);
+    border-radius: 25px;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+.side-menu {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.menu-cnt {
+    width: 90px;
+}
+
+.dItems:hover {
+    background: linear-gradient(195deg, #49a3f1, #1A73E8);
+    transition-duration: 0.7s;
+
+}
+
+.navIcons {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.navIcon-sidebar {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+
+.home-controle {
+    display: flex;
+}
+
+.routes {
+    flex-grow: 1;
+}
+
+.closeIcon {
+    width: 22px;
+    height: 22px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.closeIconParent {
+    text-align: end;
+}
+
+
+
+.sticky-nav {
+    position: sticky;
+    top: 20px;
+}
+
+.cardHead {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    vertical-align: middle;
+    margin-bottom: 0px;
+    padding-left: 0;
+}
+
+
+
+.card-body {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.card-cnt {
+    margin-top: 30px;
+    text-align: center;
+}
+
+
+.nav-main {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-sub {
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.5);
+    top: -10px;
+    width: 100%;
+    width: 79% !important;
+    margin: 20px 0px;
+    background-color: #f0f5f5 !important;
+    padding: 10px 20px;
+    border-radius: 10px;
+
+
+}
+
+.projects {
+    margin-top: 90px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 50px;
+}
+
+.tables-main {
+    margin-top: 90px;
+    margin-bottom: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.AddaccountForm-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 110px;
+}
+
+.todo {
+    flex-wrap: wrap;
+    margin-top: 120px;
+}
+
+.todoTable {
+    margin-top: 100px;
+}
+
+@media only screen and (min-width: 992px) {
+    .closeIcon {
+        display: none;
+    }
+
+    .navIcon-sidebar {
+        display: none;
+    }
+
+    .projects {
+        margin-left: 280px;
+    }
+
+    .tables-main {
+        margin-left: 280px;
+    }
+
+    .todo {
+        margin-left: 280px;
+
+    }
+
+    .todoTable {
+        margin-left: 280px;
+    }
+
+    .nav-main {
+        display: flex;
+        justify-content: end;
+    }
+
+    .AddaccountForm-main {
+        margin-left: 280px;
+    }
+
+
+}
+
+.sidebar {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+@media only screen and (max-width: 992px) {
+    .home-controle {
+        display: block;
+        position: relative;
+    }
+
+
+    .nav-sub {
+        width: 100% !important;
+    }
+
+    .sidebarTrue {
+        position: absolute;
+        left: 25%;
+    }
+
+    .sidebarnot {
+        position: absolute;
+        left: -85%;
+
+    }
+
+    .sidebar {
+        height: 470px;
+        position: fixed;
+        top: 90px;
+
+    }
+
+
+}
+
+@media only screen and (max-width: 400px) {
+    .sidebarTrue {
+        position: absolute;
+        left: 7%;
+    }
+
+    .sidebarnot {
+        position: absolute;
+        left: -85%;
+
+    }
+
+
+
+}
+
+.Signup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 80px;
+}
+
+.Signup-sub {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 70px 100px;
+    background-color: #eff5f5;
+    border: 1px solid #83afaf;
+    border-radius: 10px;
+
+}
+
+.img-inp {
+    border: 1px solid #83afaf;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.img-inp input {
+    outline: 0;
+    border: 0;
+    background-color: #eff5f5;
+    flex-grow: 0px;
+
+
+}
+
+@media only screen and (max-width: 933px) {
+    .Signup-sub {
+        padding: 50px;
+    }
+}
+
+@media only screen and (max-width: 461px) {
+    .Signup-sub {
+        padding: 30px 25px;
+    }
+
+    .Signup {
+        margin: 140px 0px;
+    }
+
+    .img-inp {
+        padding: 8px 5px;
+        width: 100%;
+    }
+}
+
+.input-sty {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.input-sty-prnt {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+}
+
+.sing-head {
+    text-align: center;
+}
+
+.input-sty-prnt {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.iconsLo {
+    height: 25px;
+    width: 25px;
+}
+
+.error-message {
+    color: red;
+    margin: 0px !important;
+}
+
+.endSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.addAccounts {
+    max-width: 80%;
+    margin-top: 150px;
+    overflow: hidden;
+}
+
+.AddaccountForm {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    padding: 50px;
+    background-color: #f0f5f5;
+    border-radius: 10px;
+}
+
+.inputcontrole {
+    border: 1px solid #b3cccc;
+    width: 100%;
+    padding: 8px 50px;
+    border-radius: 10px;
+}
+
+.inputcontrole input {
+    border: 0px;
+    outline: 0px;
+    background-color: #f0f5f5;
+}
+
+.input-main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.input-sub {
+    text-align: center;
+}
+
+.submit-btn {
+    display: flex;
+    align-items: end;
+}
+
+.submit-btn button {
+    border: 0px;
+    width: 160px;
+    padding: 10px 0px;
+    color: white;
+    background-color: #1A73E8;
+    border-radius: 15px;
+}
+
+
+.AddaccountForm-head {
+    padding-bottom: 20px;
+}
+
+.form-add {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+.form-add-prayer{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+}
+
+.input-sub label {
+    margin-bottom: 5px;
+}
+
+@media only screen and (max-width: 624px) {
+    .AddaccountForm {
+        width: 100%;
+    }
+
+    .input-main {
+        justify-content: center;
+    }
+
+    .inputcontrole {
+        padding: 8px 15px;
+    }
+    .form-add-prayer{
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+.table-actions-balance {
+    padding: 10px 0px;
+    width: 25%;
+    background-color: #f0f5f5;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.table-actions-income {
+    padding: 10px 0px;
+    width: 25%;
+    background-color: #f0f5f5;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.table-actions-expense {
+    padding: 10px 0px;
+    width: 25%;
+    background-color: #f0f5f5;
+    text-align: center;
+    border-radius: 10px;
+}
+.table-boot{
+    margin-top:50px;
+}
+.table-todo {
+    padding: 10px 15px;
+    background-color: #f0f5f5;
+    text-align: center;
+    border-radius: 10px;
+}
+.missed-prayers{
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tables-top {
+    display: flex;
+    justify-content: space-evenly;
+}
+.tables-top-todo{
+    display: flex;
+    justify-content:end;  
+    align-items: center;
+    gap:20px;
+}
+
+.actions-section-sub {
+    display: flex;
+    justify-content: end;
+    gap: 25px;
+    margin-right: 10px;
+}
+
+.submit-btn {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+td,
+th {
+    text-align: center;
+}
+
+.app {
+    display: flex;
+}
+
+.routes {
+    padding: 20px;
+}
+
+
+.diagram-container {
+    display: flex;
+    align-items: center;
+}
+
+.box {
+    width: 100px;
+    height: 50px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.arrow-right {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid black;
+}
+
+.arrow-left {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid black;
+}
+
+.custom-card:hover {
+    transform: translateY(-5px);
+    /* Move the card up by 5px on hover */
+    transition: transform 0.3s ease;
+    /* Add transition effect */
+}

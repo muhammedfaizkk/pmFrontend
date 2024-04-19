@@ -16,7 +16,6 @@ function Addaccounts() {
 
     const validateForm = () => {
         const errors = {};
-        const isValid = /^[1-9][0-9]*$/
         if (!input.title.trim()) {
             errors.title = "Title is required";
         }
@@ -40,7 +39,7 @@ function Addaccounts() {
     const formSubmit = async (e) => {
         e.preventDefault();
         if (validateForm()) {
-            if (dropdownControle == 'Expense') {
+            if (dropdownControle === 'Expense') {
                 try {
                     const response = await axios.post('http://localhost:4000/expences', input
                     );

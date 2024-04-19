@@ -5,14 +5,14 @@ import editImg from '../assets/icons/edit.png';
 import trushImg from '../assets/icons/icons8-trush-32.png';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { Deptstatus, dropDownacounts } from '../redux/userSlice';
+import { Deptstatus} from '../redux/userSlice';
 import { Link } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 
 function Dept() {
 
     const [updateStatus, setUpdatestatus] = useState(false);
-    const [updateStatusincome, setUpdatestatusincome] = useState(false);
+
     const [depts, setDepts] = useState([])
     const [deptsOpp, setdeptsOpp] = useState([])
     const dispatch = useDispatch();
@@ -20,13 +20,13 @@ function Dept() {
     useEffect(() => {
         fetchData();
         fetchIncome()
-    }, [updateStatus, updateStatusincome]);
+    }, [updateStatus]);
 
     const handleSelect = (eventKey) => {
         dispatch(Deptstatus(eventKey));
     };
 
-    const incomedata = useSelector((state) => state?.transactions?.income);
+
     const navigate = useNavigate();
 
     const totalExAmount = depts.reduce((total, element) => {

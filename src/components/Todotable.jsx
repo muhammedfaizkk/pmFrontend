@@ -1,20 +1,15 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { Table } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
 import trushImg from '../assets/icons/icons8-trush-32.png';
 import Card from 'react-bootstrap/Card';
 import { ToastContainer, toast } from 'react-toastify';
 
 function Todotable() {
     const [prayers, setPrayers] = useState([])
-    const navigate = useNavigate()
     const [removeControle, setremoveControle] = useState(false)
 
 
-    const navigateNext = () => {
-        navigate('/addprayer')
-    }
     useEffect(() => {
         getPrayers()
     }, [removeControle])

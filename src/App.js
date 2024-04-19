@@ -15,7 +15,6 @@ import Updateaccount from './components/Updateaccount';
 import Todotable from './components/Todotable';
 import Addprayer from './components/Addprayer';
 import Dept from './components/Dept';
-import Deptopp from './components/Deptopp';
 import AddDept from './components/AddDept';
 import { useSelector } from 'react-redux';
 import ProtectedRoute from './utils/protectedRout';
@@ -63,7 +62,6 @@ function App() {
                 <Route path='/todo' element={<ProtectedRoute isAuth={isAuth}><Todo /></ProtectedRoute>} />
                 <Route path='/addprayer' element={<ProtectedRoute isAuth={isAuth}><Addprayer /></ProtectedRoute>} />
                 <Route path='/dept' element={<ProtectedRoute isAuth={isAuth}><Dept /> </ProtectedRoute>} />
-                <Route path='/deptopp' element={<ProtectedRoute isAuth={isAuth}><Deptopp /></ProtectedRoute>} />
                 <Route path='/addDept' element={<ProtectedRoute isAuth={isAuth}><AddDept /></ProtectedRoute>} />
               </Routes>
             )}

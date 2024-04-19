@@ -47,13 +47,13 @@ function Navbarrel() {
 
     let pathnameHome;
 
-    if (location.pathname == '/todo') {
+    if (location.pathname === '/todo') {
         pathnameHome = 'Todo'
     }
-    else if (location.pathname == '/accounts') {
+    else if (location.pathname === '/accounts') {
         pathnameHome = 'Accounts'
     }
-    else if (location.pathname == '/projects') {
+    else if (location.pathname === '/projects') {
         pathnameHome = 'Task'
     }
     else {
@@ -89,7 +89,7 @@ function Navbarrel() {
                                 src={sidebarImg}
                                 alt=""
                             />
-                            {location.pathname == '/todoTable' ? <img onClick={navigateAddprayer} className='navIcons' src={addImg} alt="" />
+                            {location.pathname === '/todoTable' ? <img onClick={navigateAddprayer} className='navIcons' src={addImg} alt="" />
                                 : <img onClick={navigateAddprojects} className='navIcons' src={addImg} alt="" />
                             }
                             <img className='navIcons' src={notificatonImg} alt="" />

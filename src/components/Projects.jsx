@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useCallback, useEffect } from 'react';
 import Table from 'react-bootstrap/Table';
 import editImg from '../assets/icons/edit.png';
 import trushImg from '../assets/icons/icons8-trush-32.png';
@@ -6,30 +6,16 @@ import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAllprojects } from '../redux/projectsSlice';
 import { ToastContainer, toast } from 'react-toastify';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
 function Projects() {
     const dispatch = useDispatch();
-    const navigate = useNavigate()
     const proData = useSelector((state) => state.allProjects.projects ?? []);
     const [removeControle, setremoveControle] = useState(false)
-    const updateProject = () => {
-        navigate('/updateproject')
-    }
 
-    const getProjectsData = async () => {
-        try {
-            const res = await axios.get("http://localhost:4000/getAllprojects");
-            const projects = res.data.projects ?? [];
-            const data = res.data.success ?? false;
-            if (data) {
-                dispatch(getAllprojects(projects));
-            }
-        } catch (error) {
-            console.error("Error fetching projects:", error);
-        }
-    };
+
+
 
     const handleRemoveItemClick = async (proId) => {
         try {
@@ -56,9 +42,24 @@ function Projects() {
     };
 
 
+    const getProjectsData = useCallback(async () => {
+        try {
+            const res = await axios.get("http://localhost:4000/getAllprojects");
+            const projects = res.data.projects ?? [];
+            const data = res.data.success ?? false;
+            if (data) {
+                dispatch(getAllprojects(projects));
+            }
+        } catch (error) {
+            console.error("Error fetching projects:", error);
+        }
+    }, [dispatch]);
+
     useEffect(() => {
         getProjectsData();
-    }, [removeControle]);
+    }, [getProjectsData, removeControle]);
+
+
 
     const getStatusCellStyle = (project) => {
         return {

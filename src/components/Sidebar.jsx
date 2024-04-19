@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import '../styles/style.css'
 import dashboardImg from '../assets/icons/icons8-dashboard-30.png'
 import projectsImg from '../assets/icons/projects.png'
@@ -28,9 +28,7 @@ function Sidebar() {
     const navigateProjects = () => {
         navigate('/projects')
     }
-    const navigateHome = () => {
-        navigate('/')
-    }
+
     const navigateAccounts = () => {
         navigate('/accounts')
     }

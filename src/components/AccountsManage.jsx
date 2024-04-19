@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { Dropdown, Button, Table } from 'react-bootstrap';
 import axios from 'axios';
 import editImg from '../assets/icons/edit.png';
@@ -16,10 +16,33 @@ function AccountsManage() {
 
   const dispatch = useDispatch();
   const dropdownControle = useSelector((state) => state?.users?.drStatus ?? '');
+
+
+  const fetchData = useCallback(async () => {
+    try {
+      const res = await axios.get('http://localhost:4000/getAllexpenses');
+      const expenses = res.data.expenses ?? [];
+      dispatch(getAllexpenses(expenses));
+    } catch (error) {
+      console.error("Error fetching expenses:", error);
+    }
+  }, [dispatch]);
+
+  const fetchIncome = useCallback(async () => {
+    try {
+      const res = await axios.get('http://localhost:4000/getIncomes');
+      const incomes = res.data.incomes ?? [];
+      dispatch(getAllincome(incomes));
+    } catch (error) {
+      console.error("Error fetching incomes:", error);
+    }
+  }, [dispatch]);
+
   useEffect(() => {
     fetchIncome();
     fetchData();
-  }, [updateStatus]);
+  }, [updateStatus, fetchIncome, fetchData]);
+
 
   const handleSelect = (eventKey) => {
     dispatch(dropDownacounts(eventKey));
@@ -52,29 +75,9 @@ function AccountsManage() {
 
 
 
-  const expense = exdata?.amount?.reduce((total, current) => total + current, 0);
-  const income = incomedata?.amount?.reduce((total, current) => total + current, 0);
 
 
-  const fetchData = async () => {
-    try {
-      const res = await axios.get('http://localhost:4000/getAllexpenses');
-      const expenses = res.data.expenses ?? [];
-      dispatch(getAllexpenses(expenses));
-    } catch (error) {
-      console.error("Error fetching expenses:", error);
-    }
-  };
 
-  const fetchIncome = async () => {
-    try {
-      const res = await axios.get('http://localhost:4000/getIncomes');
-      const Incomes = res.data.incomes ?? [];
-      dispatch(getAllincome(Incomes));
-    } catch (error) {
-      console.error("Error fetching expenses:", error);
-    }
-  }
 
   const addNew = () => {
     navigate('/addaccounts');

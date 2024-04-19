@@ -16,7 +16,7 @@ function AddDept() {
 
     const validateForm = () => {
         const errors = {};
-        const isValid = /^[1-9][0-9]*$/
+
         if (!input.name.trim()) {
             errors.title = "Title is required";
         }
@@ -37,7 +37,7 @@ function AddDept() {
     const formSubmit = async (e) => {
         e.preventDefault();
         if (validateForm()) {
-            if (dropdownControle == 'Dept') {
+            if (dropdownControle === 'Dept') {
                 try {
                     const response = await axios.post('http://localhost:4000/Adddepts', input
                     );
@@ -54,7 +54,7 @@ function AddDept() {
 
 
                         setTimeout(function () {
-                            navigate('/accounts')
+                            navigate('/dept')
                         }, 1000);
                     }
 
@@ -87,7 +87,7 @@ function AddDept() {
 
 
                         setTimeout(function () {
-                            navigate('/accounts')
+                            navigate('/dept')
                         }, 1000);
                     }
 

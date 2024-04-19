@@ -3,7 +3,7 @@ import axios from 'axios';
 import usernameImg from '../assets/icons/icons8-username-30.png';
 import passwordImg from '../assets/icons/icons8-password-24.png';
 import { useDispatch } from 'react-redux';
-import {useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import { ToastContainer, toast } from 'react-toastify';
 import { userAuth } from '../redux/userSlice';

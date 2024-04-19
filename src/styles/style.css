@@ -238,7 +238,7 @@ th {
 
     .nav-main {
         display: flex;
-        justify-content: end;
+        justify-content: center;
     }
 
     .AddaccountForm-main {
@@ -304,7 +304,9 @@ th {
 
 
 }
-
+.autoprefixer{
+    justify-content: flex-end;
+}
 .Signup {
     display: flex;
     flex-direction: column;
@@ -445,7 +447,7 @@ th {
 
 .submit-btn {
     display: flex;
-    align-items: end;
+    align-items: center;
 }
 
 .submit-btn button {
@@ -541,15 +543,13 @@ th {
     justify-content: space-evenly;
 }
 .tables-top-todo{
-    display: flex;
-    justify-content:end;  
+    display: flex; 
     align-items: center;
     gap:20px;
 }
 
 .actions-section-sub {
     display: flex;
-    justify-content: end;
     gap: 25px;
     margin-right: 10px;
 }

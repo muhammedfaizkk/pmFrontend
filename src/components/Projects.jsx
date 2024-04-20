@@ -44,7 +44,7 @@ function Projects() {
 
     const getProjectsData = useCallback(async () => {
         try {
-            const res = await axios.get("http://localhost:4000/getAllprojects");
+            const res = await axios.get("https://pmbackend-xdwu.onrender.com/getAllprojects");
             const projects = res.data.projects ?? [];
             const data = res.data.success ?? false;
             if (data) {

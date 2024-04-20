@@ -38,7 +38,7 @@ function AddPrayer() {
     event.preventDefault();
     console.log(selectedValues);
     try {
-      const response = await axios.post('http://localhost:4000/addPrayers', selectedValues
+      const response = await axios.post('https://pmbackend-xdwu.onrender.com/addPrayers', selectedValues
       );
 
       if (response.data.success) {

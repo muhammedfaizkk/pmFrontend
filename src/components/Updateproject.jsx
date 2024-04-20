@@ -57,7 +57,7 @@ function UpdateProject() {
     e.preventDefault();
     if (validateForm()) {
       try {
-        const response = await axios.put(`http://localhost:4000/updateProjects/${id}`, input);
+        const response = await axios.put(`https://pmbackend-xdwu.onrender.com/updateProjects/${id}`, input);
         if (response.data.success) {
           toast.success('Successfully updated task', {
             position: 'top-center',

@@ -47,7 +47,7 @@ function Projectadd() {
         e.preventDefault();
         if (validateForm()) {
             try {
-                const response = await axios.post('http://localhost:4000/addprojects', input
+                const response = await axios.post('https://pmbackend-xdwu.onrender.com/addprojects', input
                 );
 
                 if (response.data.success) {

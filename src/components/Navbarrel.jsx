@@ -63,7 +63,7 @@ function Navbarrel() {
 
 
     return (
-        <div className='nav-main'>
+        <div className='nav-main d-flex justify-content-end '>
             <Navbar expand="lg" className=" nav-sub z-1" >
                 <Container>
                     <Navbar.Brand href="#" className='d-flex align-items-center gap-1'>

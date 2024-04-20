@@ -30,7 +30,7 @@ function AccountsManage() {
 
   const fetchIncome = useCallback(async () => {
     try {
-      const res = await axios.get('http://localhost:4000/getIncomes');
+      const res = await axios.get('https://pmbackend-xdwu.onrender.com/getIncomes');
       const incomes = res.data.incomes ?? [];
       dispatch(getAllincome(incomes));
     } catch (error) {
@@ -86,7 +86,7 @@ function AccountsManage() {
   const handleDelete = async (expenseId) => {
     if (dropdownControle === 'Expense') {
       try {
-        const response = await axios.delete(`http://localhost:4000/Exremove/${expenseId}`);
+        const response = await axios.delete(`https://pmbackend-xdwu.onrender.com/Exremove/${expenseId}`);
         if (response.data.success) {
           setUpdatestatus((prevStatus) => !prevStatus);
           toast.success('Successfully Removed', {
@@ -111,7 +111,7 @@ function AccountsManage() {
 
   const incomeDelete = async (incomeId) => {
     try {
-      const response = await axios.delete(`http://localhost:4000/Incomeremove/${incomeId}`);
+      const response = await axios.delete(`https://pmbackend-xdwu.onrender.com/Incomeremove/${incomeId}`);
       if (response.data.success) {
         setUpdatestatus(prevStatus => !prevStatus);
         toast.success('Successfully Removed', {
@@ -138,7 +138,7 @@ function AccountsManage() {
       <ToastContainer />
       <div className='tables-main'>
         <div className='action-main'>
-          <div className='actions-section-sub'>
+          <div className='actions-section-sub justify-content-end '>
             <Dropdown onSelect={handleSelect}>
               <Dropdown.Toggle variant="light" id="dropdown-basic">
                 {dropdownControle ? dropdownControle : 'Select Category'}

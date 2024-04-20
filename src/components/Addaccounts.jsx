@@ -41,7 +41,7 @@ function Addaccounts() {
         if (validateForm()) {
             if (dropdownControle === 'Expense') {
                 try {
-                    const response = await axios.post('http://localhost:4000/expences', input
+                    const response = await axios.post('https://pmbackend-xdwu.onrender.com/expences', input
                     );
 
                     if (response.data.success) {
@@ -74,7 +74,7 @@ function Addaccounts() {
 
             else {
                 try {
-                    const response = await axios.post('http://localhost:4000/income', input
+                    const response = await axios.post('https://pmbackend-xdwu.onrender.com/income', input
                     );
                     console.log('Response:', response.data);
                     if (response.data.success) {
@@ -151,7 +151,7 @@ function Addaccounts() {
                         <div className="input-main">
                             <div className='input-sub'>
                                 <label htmlFor="">
-                                    <b> Amount</b>
+                                    <b>Amount</b>
                                 </label>
                                 <div className="inputcontrole">
                                     <input type="text"

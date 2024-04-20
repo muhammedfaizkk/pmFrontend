@@ -16,7 +16,7 @@ function Todotable() {
 
     const getPrayers = async () => {
         try {
-            const res = await axios.get("http://localhost:4000/getprayers");
+            const res = await axios.get("https://pmbackend-xdwu.onrender.com/getprayers");
             const data = res.data.success ?? false;
             if (data) {
                 const data = res.data.prayers

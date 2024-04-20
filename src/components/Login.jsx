@@ -40,7 +40,7 @@ function Login() {
         e.preventDefault();
         if (validateForm()) {
             try {
-                const response = await axios.post(`http://localhost:4000/login`, input
+                const response = await axios.post(`https://pmbackend-xdwu.onrender.com/login`, input
                 );
                 if (response.data.success) {
                     dispatch(userAuth(true))
@@ -54,7 +54,7 @@ function Login() {
 
 
                     setTimeout(function () {
-                        navigate('/')
+                        navigate('/todo')
                     }, 1000);
                 }
 

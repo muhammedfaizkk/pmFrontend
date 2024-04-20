@@ -39,7 +39,7 @@ function AddDept() {
         if (validateForm()) {
             if (dropdownControle === 'Dept') {
                 try {
-                    const response = await axios.post('http://localhost:4000/Adddepts', input
+                    const response = await axios.post('https://pmbackend-xdwu.onrender.com/Adddepts', input
                     );
 
                     if (response.data.success) {
@@ -72,7 +72,7 @@ function AddDept() {
 
             else {
                 try {
-                    const response = await axios.post('http://localhost:4000/Adddeptsopp', input
+                    const response = await axios.post('https://pmbackend-xdwu.onrender.com/Adddeptsopp', input
                     );
                     console.log('Response:', response.data);
                     if (response.data.success) {
